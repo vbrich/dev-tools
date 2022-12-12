@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import MuiAppBar from '@mui/material/AppBar';
@@ -173,7 +172,6 @@ function DashboardContent() {
   return (
     <ThemeProvider theme={isDarkTheme ? createTheme(dark): createTheme(light)}>
       <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
