@@ -1,6 +1,6 @@
-const dark = {
+const light = {
     palette: {
-      mode: "dark",
+      mode: "light",
       primary: {
         main: '#61dafb',
         light: '#61dafb',
@@ -15,7 +15,7 @@ const dark = {
         main: '#444444',
       },
       background: {
-        default: '#1E1E1E',
+        default: '#fff',
       },
     },
     overrides: {
@@ -23,7 +23,7 @@ const dark = {
         root: {
           padding: '20px 10px',
           margin: '10px',
-          backgroundColor: '#000', // 5d737e
+          backgroundColor: '#fff', // 5d737e
         },
       },
       MuiButton: {
@@ -33,4 +33,4 @@ const dark = {
       },
     }
   };
-  export default dark;
+  export default light;

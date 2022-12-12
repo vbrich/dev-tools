@@ -1,8 +1,8 @@
-const dark = {
+const theme_1 = {
     palette: {
-      mode: "dark",
+      mode: "light",
       primary: {
-        main: '#61dafb',
+        main: '#ccc',
         light: '#61dafb',
         dark: '#21a1c4',
       },
@@ -33,4 +33,5 @@ const dark = {
       },
     }
   };
-  export default dark;
+
+  export default theme_1;

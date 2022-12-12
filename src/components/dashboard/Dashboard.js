@@ -21,6 +21,9 @@ import Orders from './Orders';
 import { useState } from 'react';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
+import dark from '../../themes/dark';
+// import light from '../../themes/light';
+import theme_1 from '../../themes/theme_1';
 
 function Copyright(props) {
   return (
@@ -81,81 +84,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-// const mdTheme = createTheme();
-
-// Define theme settings
-const light = {
-  palette: {
-    mode: "light",
-    primary: {
-      main: '#61dafb',
-      light: '#61dafb',
-      dark: '#21a1c4',
-    },
-    secondary: {
-      main: '#b5ecfb',
-      light: '#61dafb',
-      dark: '#21a1c4',
-    },
-    error: {
-      main: '#444444',
-    },
-    background: {
-      default: '#fff',
-    },
-  },
-  overrides: {
-    MuiPaper: {
-      root: {
-        padding: '20px 10px',
-        margin: '10px',
-        backgroundColor: '#fff', // 5d737e
-      },
-    },
-    MuiButton: {
-      root: {
-        margin: '5px',
-      },
-    },
-  }
-};
-
-const dark = {
-  palette: {
-    mode: "dark",
-    primary: {
-      main: '#61dafb',
-      light: '#61dafb',
-      dark: '#21a1c4',
-    },
-    secondary: {
-      main: '#b5ecfb',
-      light: '#61dafb',
-      dark: '#21a1c4',
-    },
-    error: {
-      main: '#444444',
-    },
-    background: {
-      default: '#1E1E1E',
-    },
-  },
-  overrides: {
-    MuiPaper: {
-      root: {
-        padding: '20px 10px',
-        margin: '10px',
-        backgroundColor: '#000', // 5d737e
-      },
-    },
-    MuiButton: {
-      root: {
-        margin: '5px',
-      },
-    },
-  }
-};
-
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -170,7 +98,7 @@ function DashboardContent() {
   }
 
   return (
-    <ThemeProvider theme={isDarkTheme ? createTheme(dark): createTheme(light)}>
+    <ThemeProvider theme={isDarkTheme ? createTheme(dark): createTheme(theme_1)}>
       <Box sx={{ display: 'flex' }}>
         <AppBar position="absolute" open={open}>
           <Toolbar
