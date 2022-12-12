@@ -9,18 +9,19 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import { useState } from 'react';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 
 function Copyright(props) {
   return (
@@ -81,7 +82,80 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-const mdTheme = createTheme();
+// const mdTheme = createTheme();
+
+// Define theme settings
+const light = {
+  palette: {
+    mode: "light",
+    primary: {
+      main: '#61dafb',
+      light: '#61dafb',
+      dark: '#21a1c4',
+    },
+    secondary: {
+      main: '#b5ecfb',
+      light: '#61dafb',
+      dark: '#21a1c4',
+    },
+    error: {
+      main: '#444444',
+    },
+    background: {
+      default: '#fff',
+    },
+  },
+  overrides: {
+    MuiPaper: {
+      root: {
+        padding: '20px 10px',
+        margin: '10px',
+        backgroundColor: '#fff', // 5d737e
+      },
+    },
+    MuiButton: {
+      root: {
+        margin: '5px',
+      },
+    },
+  }
+};
+
+const dark = {
+  palette: {
+    mode: "dark",
+    primary: {
+      main: '#61dafb',
+      light: '#61dafb',
+      dark: '#21a1c4',
+    },
+    secondary: {
+      main: '#b5ecfb',
+      light: '#61dafb',
+      dark: '#21a1c4',
+    },
+    error: {
+      main: '#444444',
+    },
+    background: {
+      default: '#1E1E1E',
+    },
+  },
+  overrides: {
+    MuiPaper: {
+      root: {
+        padding: '20px 10px',
+        margin: '10px',
+        backgroundColor: '#000', // 5d737e
+      },
+    },
+    MuiButton: {
+      root: {
+        margin: '5px',
+      },
+    },
+  }
+};
 
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
@@ -89,8 +163,15 @@ function DashboardContent() {
     setOpen(!open);
   };
 
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  
+  // This function triggered when switch is clicked
+  const changeTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  }
+
   return (
-    <ThemeProvider theme={mdTheme}>
+    <ThemeProvider theme={isDarkTheme ? createTheme(dark): createTheme(light)}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
@@ -120,11 +201,17 @@ function DashboardContent() {
             >
               Dashboard
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
+
+            <IconButton 
+              color="inherit" 
+              aria-label="light" 
+              size="small" 
+              onClick={() => {
+                changeTheme();
+              }}>
+              {isDarkTheme ? <LightModeOutlinedIcon fontSize="inherit"/> : <NightlightOutlinedIcon fontSize="inherit"/>}  
             </IconButton>
+
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
