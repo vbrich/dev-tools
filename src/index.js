@@ -4,13 +4,21 @@ import './index.css';
 import App from './App';
 import {CssBaseline} from '@mui/material';
 // import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import Dashboard from './components/dashboard/Dashboard';
+import SignInSide from './components/signin/SigninSide';
+import { Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
+  <BrowserRouter>
     <CssBaseline />
+    <Routes>
+          <Route path='/' element={<SignInSide />}/>
+          <Route path='/dashboard' element={<Dashboard />}/>
+      </Routes>
     <App />
-  </div>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
