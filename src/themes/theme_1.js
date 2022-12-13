@@ -2,17 +2,17 @@ const theme_1 = {
     palette: {
       mode: "light",
       primary: {
-        main: '#ccc',
-        light: '#61dafb',
-        dark: '#21a1c4',
+        main: '#607D8B',
+        light: '#CFD8DC',
+        dark: '#455A64',
       },
       secondary: {
-        main: '#b5ecfb',
-        light: '#61dafb',
-        dark: '#21a1c4',
+        main: '#9E9E9E',
+        light: '#9E9E9E',
+        dark: '#9E9E9E',
       },
       error: {
-        main: '#444444',
+        main: '#F44336',
       },
       background: {
         default: '#1E1E1E',

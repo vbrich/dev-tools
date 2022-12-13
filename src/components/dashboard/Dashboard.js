@@ -22,8 +22,8 @@ import { useState } from 'react';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import dark from '../../themes/dark';
-// import light from '../../themes/light';
-import theme_1 from '../../themes/theme_1';
+import light from '../../themes/light';
+// import theme_1 from '../../themes/theme_1';
 
 function Copyright(props) {
   return (
@@ -98,7 +98,7 @@ function DashboardContent() {
   }
 
   return (
-    <ThemeProvider theme={isDarkTheme ? createTheme(dark): createTheme(theme_1)}>
+    <ThemeProvider theme={isDarkTheme ? createTheme(dark): createTheme(light)}>
       <Box sx={{ display: 'flex' }}>
         <AppBar position="absolute" open={open}>
           <Toolbar
@@ -208,7 +208,25 @@ function DashboardContent() {
                 </Paper>
               </Grid>
             </Grid>
-            <Copyright sx={{ pt: 4 }} />
+
+
+            {/*<Copyright sx={{ pt: 4 }} />*/}
+            {/* REPLACING WITH A STICKYFOOTER */}
+            <Box
+              component="footer"
+              sx={{
+                py: 3,
+                px: 2,
+                mt: 'auto',
+                backgroundColor: 'inherit',
+              }}
+            >
+              <Container maxWidth="sm">
+                <Copyright />
+              </Container>
+            </Box>
+
+
           </Container>
         </Box>
       </Box>

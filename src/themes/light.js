@@ -2,17 +2,17 @@ const light = {
     palette: {
       mode: "light",
       primary: {
-        main: '#61dafb',
-        light: '#61dafb',
+        main: '#000000',
+        light: '#ffffff',
         dark: '#21a1c4',
       },
       secondary: {
-        main: '#b5ecfb',
-        light: '#61dafb',
+        main: '#CCCCCC',
+        light: '#F5F5F5',
         dark: '#21a1c4',
       },
       error: {
-        main: '#444444',
+        main: '#F44336',
       },
       background: {
         default: '#fff',
@@ -23,7 +23,7 @@ const light = {
         root: {
           padding: '20px 10px',
           margin: '10px',
-          backgroundColor: '#fff', // 5d737e
+          backgroundColor: '#ccc', // 5d737e
         },
       },
       MuiButton: {

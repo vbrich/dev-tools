@@ -12,7 +12,7 @@ const dark = {
         dark: '#21a1c4',
       },
       error: {
-        main: '#444444',
+        main: '#F44336',
       },
       background: {
         default: '#1E1E1E',
