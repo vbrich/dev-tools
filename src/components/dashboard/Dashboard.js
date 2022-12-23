@@ -72,7 +72,7 @@ function DashboardContent() {
     setOpen(!open);
   };
 
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   
   // This function triggered when switch is clicked
   const changeTheme = () => {
@@ -132,7 +132,7 @@ function DashboardContent() {
             }}
           >
             <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
+              <ChevronLeftIcon fontSize='inherit'/>
             </IconButton>
           </Toolbar>
           <Divider />
