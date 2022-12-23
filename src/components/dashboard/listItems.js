@@ -34,12 +34,6 @@ export const secondaryListItems = (
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <OpenInNewIcon />
-      </ListItemIcon>
-      <ListItemText primary="Updates and FAQ" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
         <LogoutIcon />
       </ListItemIcon>
       <ListItemText primary="Log out" />

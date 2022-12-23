@@ -72,7 +72,7 @@ function DashboardContent() {
     setOpen(!open);
   };
 
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
   
   // This function triggered when switch is clicked
   const changeTheme = () => {
