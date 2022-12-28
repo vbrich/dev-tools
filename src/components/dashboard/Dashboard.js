@@ -19,6 +19,10 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import dark from '../../themes/dark';
 import light from '../../themes/light';
+import Test from './Test';
+import Overview from '../Overview';
+
+import { Outlet } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -155,15 +159,25 @@ function DashboardContent() {
           }}
         >
           <Toolbar />
+
+          <Overview></Overview>
+{ /* 
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  Lorum Ipsum
+                  Lorum Ipsum from Dashboard Component
                 </Paper>
               </Grid>
             </Grid>
+
+            <Outlet></Outlet>
+
+            <Test></Test>
+
           </Container>
+*/}
+
         </Box>
       </Box>
     </ThemeProvider>

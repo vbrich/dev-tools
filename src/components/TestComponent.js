@@ -1,5 +1,7 @@
 import { getData, postData } from '../utils/api';
 import { useState, useEffect } from 'react';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 
 export default function TestComponent() {
   const [data, setData] = useState(null);
@@ -22,9 +24,17 @@ export default function TestComponent() {
 
   return (
     <div>
-      <h2>TestComponent</h2>
-      {data && <p>{data.key}</p>}
-      <button onClick={handleClick}>Send data</button>
+      <br />
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+            External Test Component
+            <br />
+            {data && <p>{data.key}</p>}
+            <button onClick={handleClick}>Send data</button>
+          </Paper>
+        </Grid>
+      </Grid>      
     </div>
   );
 }
