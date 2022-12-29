@@ -38,7 +38,7 @@ export default function SignInSide() {
       email: data.get('email'),
       password: data.get('password'),
     });
-    navigate("/main");
+    navigate("/");
   };
 
   return (

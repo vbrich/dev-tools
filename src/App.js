@@ -12,8 +12,8 @@ function App() {
     <BrowserRouter>
       <CssBaseline />
       <Routes>
-        <Route path='/' element={<SignInSide />}/>
-        <Route path='/main/*' element={<Main />}>        
+        <Route path='/signin' element={<SignInSide />}/>
+        <Route path='/' element={<Main />}>        
             <Route path='overview' element={<Overview />}></Route>
             <Route path='apitest' element={<ApiTestComponent somedata1="somedata" somedata2="somedata2"/>}></Route>          
         </Route>

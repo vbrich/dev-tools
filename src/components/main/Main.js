@@ -18,13 +18,11 @@ import dark from '../../themes/dark';
 import light from '../../themes/light';
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
-
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from "react-router-dom";
-
 
 const drawerWidth = 240;
 
@@ -150,14 +148,14 @@ function MainContent() {
 
 
             <Divider sx={{ my: 1}} />
-    <Link to="/" style={{ color: '#000', textDecoration: 'none' }}>
-      <ListItemButton>
-        <ListItemIcon>
-            <LogoutIcon />
-        </ListItemIcon>
-        <ListItemText primary="Log out" />
-      </ListItemButton>
-    </Link>
+            <Link to="/signin" style={{ color: '#000', textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                    <LogoutIcon />
+                </ListItemIcon>
+                <ListItemText primary="Log out" />
+              </ListItemButton>
+            </Link>
 
 
 
