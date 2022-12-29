@@ -10,7 +10,6 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { mainListItems, secondaryListItems } from './listItems';
 import { useState } from 'react';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
@@ -22,7 +21,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
+import HomeIcon from '@mui/icons-material/Home';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import HttpIcon from '@mui/icons-material/Http';
 import { Link } from "react-router-dom";
+import Container from '@mui/material/Container';
 
 const drawerWidth = 240;
 
@@ -77,10 +80,15 @@ function MainContent() {
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [linkColor, setLinkColor] = useState('#000');
 
   // This function triggered when switch is clicked
   const changeTheme = () => {
     setIsDarkTheme(!isDarkTheme);
+    if (linkColor === '#000')
+      setLinkColor('#fff');
+    else 
+      setLinkColor('#000');
   }
 
   return (
@@ -140,15 +148,33 @@ function MainContent() {
             </IconButton>
           </Toolbar>
           <Divider />
-          <List component="nav">
-            {mainListItems}
+          <List component="nav">            
+            <Link to="/" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+              </ListItemButton>
+            </Link>
+            <Link to="/overview" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <MenuBookIcon />
+                </ListItemIcon>
+                <ListItemText primary="Overview" />
+              </ListItemButton>
+            </Link>
+            <Link to="/apitest" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <HttpIcon />
+                </ListItemIcon>
+                <ListItemText primary="API Test" />
+              </ListItemButton>
+            </Link>    
             <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
-
-
-
-            <Divider sx={{ my: 1}} />
-            <Link to="/signin" style={{ color: '#000', textDecoration: 'none' }}>
+            <Link to="/signin" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
                     <LogoutIcon />
@@ -156,10 +182,6 @@ function MainContent() {
                 <ListItemText primary="Log out" />
               </ListItemButton>
             </Link>
-
-
-
-
           </List>
         </Drawer>
         <Box
@@ -181,6 +203,31 @@ function MainContent() {
           <Footer></Footer>
 
         </Box>
+
+
+
+        <Box
+        component="footer"
+        sx={{
+          py: 3,
+          px: 2,
+          mt: 'auto',
+          backgroundColor: (theme) =>
+            theme.palette.mode === 'light'
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
+        }}
+      >
+        <Container maxWidth="sm">
+          <Typography variant="body1">
+            My sticky footer can be found here.
+          </Typography>
+          <Footer />
+        </Container>
+        </Box>
+
+
+
       </Box>
     </ThemeProvider>
   );

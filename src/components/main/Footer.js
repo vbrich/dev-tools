@@ -1,18 +1,16 @@
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer(props) {
 
   return (
-    <div>
-      <br />
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-          Footer Component
-        </Paper>
-        </Grid>
-      </Grid>
-    </div>
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
   );
 }
