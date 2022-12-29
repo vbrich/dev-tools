@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
-export default function Test() {
+export default function Footer() {
 
   return (
     <div>
@@ -9,7 +9,7 @@ export default function Test() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
         <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-          UI Test Component
+          Footer Component
         </Paper>
         </Grid>
       </Grid>

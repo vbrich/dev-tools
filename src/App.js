@@ -12,7 +12,7 @@ function App() {
       <CssBaseline />
       <Routes>
         <Route path='/' element={<SignInSide />}/>
-        <Route path='/dashboard' element={<Dashboard />}>
+        <Route path='/dashboard/*' element={<Dashboard />}>
          <Route path=":someId" element={<TestComponent />} />
         </Route>
       </Routes>
