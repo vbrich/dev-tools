@@ -3,6 +3,14 @@ const light = {
       mode: "light",
       primary: {
         main: '#1876D1'
+      },
+      text: {
+        primary: '#000',
+        secondary: '#000',
+      },
+      something: {
+        primary: '#173A5E',
+        secondary: '#46505A',
       }
     }
   };

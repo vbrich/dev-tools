@@ -1,4 +1,4 @@
-import { getData, postData } from '../utils/api';
+import { getData, postData } from '../../utils/api';
 import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';

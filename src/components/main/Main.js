@@ -21,7 +21,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
-import HomeIcon from '@mui/icons-material/Home';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import HttpIcon from '@mui/icons-material/Http';
 import { Link } from "react-router-dom";
@@ -119,7 +118,7 @@ function MainContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Utilities
+              {/* title goes here */}
             </Typography>
 
             <IconButton 
@@ -149,14 +148,6 @@ function MainContent() {
           </Toolbar>
           <Divider />
           <List component="nav">            
-            <Link to="/" style={{ color: linkColor, textDecoration: 'none' }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary="Home" />
-              </ListItemButton>
-            </Link>
             <Link to="/overview" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -190,43 +181,43 @@ function MainContent() {
             backgroundColor: (theme) =>
               theme.palette.mode === 'light'
                 ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+                : theme.palette.grey[900],            
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
           }}
         >
           <Toolbar />
 
           <Outlet></Outlet>
 
-          <Footer></Footer>
+          <Box
+            component="footer"
+            sx={{
+              py: 3,
+              px: 2,
+              mt: 'auto',
+              backgroundColor: (theme) =>
+                theme.palette.mode === 'light'
+                  ? theme.palette.grey[200]
+                  : theme.palette.grey[800],
+            }}
+          >
+          <Container maxWidth="sm">
+            <Footer></Footer>          
+          </Container>
+          </Box>
 
         </Box>
 
-
-
-        <Box
-        component="footer"
-        sx={{
-          py: 3,
-          px: 2,
-          mt: 'auto',
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
-        }}
-      >
-        <Container maxWidth="sm">
-          <Typography variant="body1">
-            My sticky footer can be found here.
-          </Typography>
-          <Footer />
-        </Container>
-        </Box>
-
-
+{/* Just a pallete example
+        <Box sx={{
+          bgcolor: 'something.primary'
+        }}>Testing</Box>
+*/}
 
       </Box>
     </ThemeProvider>
