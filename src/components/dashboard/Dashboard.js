@@ -8,9 +8,6 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems, secondaryListItems } from './listItems';
@@ -19,10 +16,10 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import dark from '../../themes/dark';
 import light from '../../themes/light';
-import Test from './Test';
 import Overview from '../Overview';
-
-import { Outlet } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import TestComponent from '../TestComponent';
+import Test from '../dashboard/Test';
 
 const drawerWidth = 240;
 
@@ -160,23 +157,11 @@ function DashboardContent() {
         >
           <Toolbar />
 
-          <Overview></Overview>
-{ /* 
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  Lorum Ipsum from Dashboard Component
-                </Paper>
-              </Grid>
-            </Grid>
-
-            <Outlet></Outlet>
-
-            <Test></Test>
-
-          </Container>
-*/}
+          <Routes>
+            <Route path='/' element={<Overview />}></Route>
+            <Route path='/testing2' element={<TestComponent somedata1="somedata" somedata2="somedata2"/>}></Route>
+          </Routes>
+          <Test></Test>
 
         </Box>
       </Box>

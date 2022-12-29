@@ -5,14 +5,14 @@ export default function Test() {
 
   return (
     <div>
-        <br />
-        <Grid container spacing={3}>
-            <Grid item xs={12}>
-            <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                Lorum Ipsum from Test Component
-            </Paper>
-            </Grid>
+      <br />
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+          UI Test Component
+        </Paper>
         </Grid>
+      </Grid>
     </div>
   );
 }

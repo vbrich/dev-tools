@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
-export default function TestComponent() {
+export default function TestComponent(props) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -28,7 +28,11 @@ export default function TestComponent() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-            External Test Component
+            API Test Component
+            <br />
+            {props.somedata1}
+            <br />
+            {props.somedata2}
             <br />
             {data && <p>{data.key}</p>}
             <button onClick={handleClick}>Send data</button>

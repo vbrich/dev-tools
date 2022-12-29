@@ -5,36 +5,31 @@ import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import LogoutIcon from '@mui/icons-material/Logout';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from "react-router-dom";
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <AdminPanelSettingsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Admin" />
-    </ListItemButton>
+    <Link to="/dashboard" style={{ color: '#000', textDecoration: 'none' }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItemButton>
+    </Link>
+    <Link to="/dashboard/testing2" style={{ color: '#000', textDecoration: 'none' }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <AdminPanelSettingsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Admin" />
+      </ListItemButton>
+    </Link>
   </React.Fragment>
 );
 
 export const secondaryListItems = (
   <React.Fragment>
-    <Link to="/test" style={{ color: '#000', textDecoration: 'none' }}>
-      <ListItemButton>
-        <ListItemIcon>
-          <OpenInNewIcon />
-        </ListItemIcon>
-        <ListItemText primary="Updates and FAQ" />
-      </ListItemButton>
-    </Link>
     <Link to="/" style={{ color: '#000', textDecoration: 'none' }}>
       <ListItemButton>
         <ListItemIcon>
