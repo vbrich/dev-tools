@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
-export default function TestComponent(props) {
+export default function ApiTestComponent(props) {
   const [data, setData] = useState(null);
 
   useEffect(() => {

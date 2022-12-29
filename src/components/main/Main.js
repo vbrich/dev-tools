@@ -19,6 +19,13 @@ import light from '../../themes/light';
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
 
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from "react-router-dom";
+
+
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
@@ -65,14 +72,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-function DashboardContent() {
+function MainContent() {
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(false);
-  
+
   // This function triggered when switch is clicked
   const changeTheme = () => {
     setIsDarkTheme(!isDarkTheme);
@@ -106,7 +113,7 @@ function DashboardContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Utilities
             </Typography>
 
             <IconButton 
@@ -139,6 +146,22 @@ function DashboardContent() {
             {mainListItems}
             <Divider sx={{ my: 1 }} />
             {secondaryListItems}
+
+
+
+            <Divider sx={{ my: 1}} />
+    <Link to="/" style={{ color: '#000', textDecoration: 'none' }}>
+      <ListItemButton>
+        <ListItemIcon>
+            <LogoutIcon />
+        </ListItemIcon>
+        <ListItemText primary="Log out" />
+      </ListItemButton>
+    </Link>
+
+
+
+
           </List>
         </Drawer>
         <Box
@@ -165,6 +188,6 @@ function DashboardContent() {
   );
 }
 
-export default function Dashboard() {
-  return <DashboardContent />;
+export default function Main() {
+  return <MainContent />;
 }

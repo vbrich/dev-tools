@@ -3,34 +3,35 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import LogoutIcon from '@mui/icons-material/Logout';
+import HttpIcon from '@mui/icons-material/Http';
 import { Link } from "react-router-dom";
 
 export const mainListItems = (
   <React.Fragment>
-      <Link to="/dashboard" style={{ color: '#000', textDecoration: 'none' }}>
+      <Link to="/main" style={{ color: '#000', textDecoration: 'none' }}>
       <ListItemButton>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
+        <ListItemText primary="Main" />
       </ListItemButton>
     </Link>
-    <Link to="/dashboard/overview" style={{ color: '#000', textDecoration: 'none' }}>
+    <Link to="/main/overview" style={{ color: '#000', textDecoration: 'none' }}>
       <ListItemButton>
         <ListItemIcon>
-          <DashboardIcon />
+          <MenuBookIcon />
         </ListItemIcon>
         <ListItemText primary="Overview" />
       </ListItemButton>
     </Link>
-    <Link to="/dashboard/testing2" style={{ color: '#000', textDecoration: 'none' }}>
+    <Link to="/main/apitest" style={{ color: '#000', textDecoration: 'none' }}>
       <ListItemButton>
         <ListItemIcon>
-          <AdminPanelSettingsIcon />
+          <HttpIcon />
         </ListItemIcon>
-        <ListItemText primary="Testing" />
+        <ListItemText primary="API Test" />
       </ListItemButton>
     </Link>
   </React.Fragment>
