@@ -16,9 +16,7 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import dark from '../../themes/dark';
 import light from '../../themes/light';
-import Overview from '../Overview';
-import { Route, Routes } from 'react-router-dom';
-import TestComponent from '../TestComponent';
+import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
 
 const drawerWidth = 240;
@@ -157,10 +155,8 @@ function DashboardContent() {
         >
           <Toolbar />
 
-          <Routes>
-            <Route path='/' element={<Overview />}></Route>
-            <Route path='/testing2' element={<TestComponent somedata1="somedata" somedata2="somedata2"/>}></Route>
-          </Routes>
+          <Outlet></Outlet>
+
           <Footer></Footer>
 
         </Box>

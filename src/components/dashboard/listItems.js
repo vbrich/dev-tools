@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export const mainListItems = (
   <React.Fragment>
-    <Link to="/dashboard" style={{ color: '#000', textDecoration: 'none' }}>
+      <Link to="/dashboard" style={{ color: '#000', textDecoration: 'none' }}>
       <ListItemButton>
         <ListItemIcon>
           <DashboardIcon />
@@ -17,12 +17,20 @@ export const mainListItems = (
         <ListItemText primary="Dashboard" />
       </ListItemButton>
     </Link>
+    <Link to="/dashboard/overview" style={{ color: '#000', textDecoration: 'none' }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Overview" />
+      </ListItemButton>
+    </Link>
     <Link to="/dashboard/testing2" style={{ color: '#000', textDecoration: 'none' }}>
       <ListItemButton>
         <ListItemIcon>
           <AdminPanelSettingsIcon />
         </ListItemIcon>
-        <ListItemText primary="Admin" />
+        <ListItemText primary="Testing" />
       </ListItemButton>
     </Link>
   </React.Fragment>

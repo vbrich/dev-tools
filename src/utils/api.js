@@ -16,5 +16,6 @@ export async function postData(mydata) {
 
   const data = await response.json();
   console.log('bottom data = ' + data);
+
   return data;
 }
