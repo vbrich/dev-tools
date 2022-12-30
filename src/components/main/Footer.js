@@ -1,14 +1,13 @@
 import Typography from '@mui/material/Typography';
-import { Link } from "react-router-dom";
 
 export default function Footer(props) {
 
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://github.com/vbrich/react-template">
+      {'Copyright © '}      
+      <a href="https://github.com/vbrich/react-template" target={"_blank"} rel="noreferrer" style={{ textDecoration: 'none' }}>
         ribo916
-      </Link>{' '}
+      </a>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>

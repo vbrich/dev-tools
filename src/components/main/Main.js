@@ -22,9 +22,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import ConstructionIcon from '@mui/icons-material/Construction';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import HttpIcon from '@mui/icons-material/Http';
 import { Link } from "react-router-dom";
 
@@ -155,14 +154,14 @@ function MainContent() {
 
           <Divider />
           <List component="nav" dense="true">            
-            <Link to="/overview" style={{ color: linkColor, textDecoration: 'none' }}>
+            <Link to="/favorites" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
-                  <MenuBookIcon />
+                    <FavoriteIcon />
                 </ListItemIcon>
-                <ListItemText primary="Overview" />
+                <ListItemText primary="Favorites" />
               </ListItemButton>
-            </Link>
+            </Link>             
             <Link to="/apitest" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -170,7 +169,7 @@ function MainContent() {
                 </ListItemIcon>
                 <ListItemText primary="API Test" />
               </ListItemButton>
-            </Link>    
+            </Link>               
 
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
@@ -180,25 +179,7 @@ function MainContent() {
                 </ListItemIcon>
                 <ListItemText primary="Drawer Example" />
               </ListItemButton>
-            </Link>  
-
-            <Divider sx={{ my: 1 }}></Divider>
-            <a href="https://base64.guru/converter/decode/pdf" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
-            <ListItemButton>
-              <ListItemIcon>
-                  <ConstructionIcon />
-              </ListItemIcon>  
-              <ListItemText primary="Base64 Decode PDF"></ListItemText>              
-            </ListItemButton>
-            </a>
-            <a href="https://base64.guru/converter/encode/pdf" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
-            <ListItemButton>
-              <ListItemIcon>
-                  <ConstructionIcon />
-              </ListItemIcon>  
-              <ListItemText primary="Base64 Encode PDF"></ListItemText>              
-            </ListItemButton>
-            </a>
+            </Link>
 
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/signin" style={{ color: linkColor, textDecoration: 'none' }}>
