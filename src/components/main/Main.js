@@ -23,11 +23,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import TableRestaurantIcon from '@mui/icons-material/TableRestaurant';
 import ConstructionIcon from '@mui/icons-material/Construction';
+import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import HttpIcon from '@mui/icons-material/Http';
 import { Link } from "react-router-dom";
-import { ListSubheader } from '@mui/material';
 
 const drawerWidth = 250;
 
@@ -140,7 +139,7 @@ function MainContent() {
         </AppBar>
 
         {/* DRAWER */}
-        <Drawer anchor="right" variant="permanent" open={open}>
+        <Drawer variant="permanent" open={open}>
           <Toolbar
             sx={{
               display: 'flex',
@@ -155,7 +154,7 @@ function MainContent() {
           </Toolbar>
 
           <Divider />
-          <List component="nav">            
+          <List component="nav" dense="true">            
             <Link to="/overview" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -174,24 +173,30 @@ function MainContent() {
             </Link>    
 
             <Divider sx={{ my: 1 }}></Divider>
-            <ListSubheader inset="true">MUI Examples</ListSubheader>
             <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
-                    <TableRestaurantIcon />
+                    <ScreenShareIcon />
                 </ListItemIcon>
                 <ListItemText primary="Drawer Example" />
               </ListItemButton>
             </Link>  
 
             <Divider sx={{ my: 1 }}></Divider>
-            <ListSubheader inset="true">Utilities</ListSubheader>
             <a href="https://base64.guru/converter/decode/pdf" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
                   <ConstructionIcon />
               </ListItemIcon>  
               <ListItemText primary="Base64 Decode PDF"></ListItemText>              
+            </ListItemButton>
+            </a>
+            <a href="https://base64.guru/converter/encode/pdf" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
+            <ListItemButton>
+              <ListItemIcon>
+                  <ConstructionIcon />
+              </ListItemIcon>  
+              <ListItemText primary="Base64 Encode PDF"></ListItemText>              
             </ListItemButton>
             </a>
 
