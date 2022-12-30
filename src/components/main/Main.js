@@ -25,6 +25,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import HttpIcon from '@mui/icons-material/Http';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import { Link } from "react-router-dom";
 
 const drawerWidth = 250;
@@ -170,6 +171,14 @@ function MainContent() {
                 <ListItemText primary="API Test" />
               </ListItemButton>
             </Link>               
+            <Link to="/chat" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <IntegrationInstructionsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Chat" />
+              </ListItemButton>
+            </Link> 
 
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>

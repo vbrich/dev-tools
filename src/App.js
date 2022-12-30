@@ -7,6 +7,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import ApiTestComponent from './components/main/ApiTest';
 import TemporaryDrawer from './components/examples/DrawerExample';
 import Favorites from './components/main/Favorites';
+import Chat from './components/chat/Chat';
 
 function App() {
   return (    
@@ -19,6 +20,7 @@ function App() {
         <Route path='/*' element={<Main />}>                    
             <Route path='apitest' element={<ApiTestComponent somedata1="somedata" somedata2="somedata2"/>}></Route>          
             <Route path='favorites' element={<Favorites />}/>
+            <Route path='chat' element={<Chat />}/>
         </Route>
         <Route path='/drawer' element={<TemporaryDrawer />}/>        
       </Routes>

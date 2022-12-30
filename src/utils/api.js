@@ -30,5 +30,6 @@ export async function codingQuestion(promptData) {
     })  
   });
   const data = await response.json();
+  console.log('Data = ' + data);
   return data;  
 }
