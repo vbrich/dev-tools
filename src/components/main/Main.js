@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import Container from '@mui/material/Container';
 import MuiDrawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import MuiAppBar from '@mui/material/AppBar';
@@ -22,11 +23,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
+import TableRestaurantIcon from '@mui/icons-material/TableRestaurant';
 import HttpIcon from '@mui/icons-material/Http';
 import { Link } from "react-router-dom";
-import Container from '@mui/material/Container';
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -93,6 +94,8 @@ function MainContent() {
   return (
     <ThemeProvider theme={isDarkTheme ? createTheme(dark): createTheme(light)}>
       <Box sx={{ display: 'flex' }}>
+
+        {/* APP BAR ON TOP */}
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
@@ -133,7 +136,9 @@ function MainContent() {
 
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={open}>
+
+        {/* DRAWER */}
+        <Drawer anchor="right" variant="permanent" open={open}>
           <Toolbar
             sx={{
               display: 'flex',
@@ -146,7 +151,9 @@ function MainContent() {
               <ChevronLeftIcon fontSize='inherit'/>
             </IconButton>
           </Toolbar>
+
           <Divider />
+
           <List component="nav">            
             <Link to="/overview" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
@@ -165,6 +172,14 @@ function MainContent() {
               </ListItemButton>
             </Link>    
             <Divider sx={{ my: 1 }} />
+            <Link to="/drawer" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                    <TableRestaurantIcon />
+                </ListItemIcon>
+                <ListItemText primary="Drawer Example" />
+              </ListItemButton>
+            </Link>            
             <Link to="/signin" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -173,8 +188,12 @@ function MainContent() {
                 <ListItemText primary="Log out" />
               </ListItemButton>
             </Link>
+
           </List>
         </Drawer>
+
+
+        {/* MAIN AREA */}
         <Box
           component="main"
           sx={{

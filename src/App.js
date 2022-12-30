@@ -6,6 +6,7 @@ import SignInSide from './components/signin/SigninSide';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Overview from './components/main/Overview';
 import ApiTestComponent from './components/main/ApiTest';
+import TemporaryDrawer from './components/main/DrawerExample';
 
 function App() {
   return (    
@@ -19,6 +20,7 @@ function App() {
             <Route path='overview' element={<Overview />}></Route>
             <Route path='apitest' element={<ApiTestComponent somedata1="somedata" somedata2="somedata2"/>}></Route>          
         </Route>
+        <Route path='/drawer' element={<TemporaryDrawer />}/>
       </Routes>
     </BrowserRouter>
   );

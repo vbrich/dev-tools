@@ -10,14 +10,15 @@ export default function ApiTestComponent(props) {
     async function fetchData() {
       const data = await getData();
       setData(data);
+      console.log('useEffect = ' + JSON.stringify(data));
     }
     fetchData();
   }, []);
 
   function handleClick() {
     async function sendData() {
-      const data = await postData();
-      console.log(data);
+      const data = await postData('Hi');
+      console.log('handleClick = ' + JSON.stringify(data));
     }
     sendData();
   }
@@ -28,11 +29,9 @@ export default function ApiTestComponent(props) {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-            API Test Component
+            <h2>API Test Component</h2>
             <br />
-            {props.somedata1}
-            <br />
-            {props.somedata2}
+            <i>Data sent into the Component = {props.somedata1}, {props.somedata2}</i>
             <br />
             {data && <p>{data.key}</p>}
             <button onClick={handleClick}>Send data</button>
