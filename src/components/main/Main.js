@@ -24,8 +24,10 @@ import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import TableRestaurantIcon from '@mui/icons-material/TableRestaurant';
+import ConstructionIcon from '@mui/icons-material/Construction';
 import HttpIcon from '@mui/icons-material/Http';
 import { Link } from "react-router-dom";
+import { ListSubheader } from '@mui/material';
 
 const drawerWidth = 250;
 
@@ -153,7 +155,6 @@ function MainContent() {
           </Toolbar>
 
           <Divider />
-
           <List component="nav">            
             <Link to="/overview" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
@@ -171,15 +172,30 @@ function MainContent() {
                 <ListItemText primary="API Test" />
               </ListItemButton>
             </Link>    
-            <Divider sx={{ my: 1 }} />
-            <Link to="/drawer" style={{ color: linkColor, textDecoration: 'none' }}>
+
+            <Divider sx={{ my: 1 }}></Divider>
+            <ListSubheader inset="true">MUI Examples</ListSubheader>
+            <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
                     <TableRestaurantIcon />
                 </ListItemIcon>
                 <ListItemText primary="Drawer Example" />
               </ListItemButton>
-            </Link>            
+            </Link>  
+
+            <Divider sx={{ my: 1 }}></Divider>
+            <ListSubheader inset="true">Utilities</ListSubheader>
+            <a href="https://base64.guru/converter/decode/pdf" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
+            <ListItemButton>
+              <ListItemIcon>
+                  <ConstructionIcon />
+              </ListItemIcon>  
+              <ListItemText primary="Base64 Decode PDF"></ListItemText>              
+            </ListItemButton>
+            </a>
+
+            <Divider sx={{ my: 1 }}></Divider>
             <Link to="/signin" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
