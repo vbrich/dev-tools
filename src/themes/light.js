@@ -2,15 +2,24 @@ const light = {
     palette: {
       mode: "light",
       primary: {
-        main: '#272727'
-      },
-      text: {
-        primary: '#000',
-        secondary: '#000',
+        main: '#272727',
       },
       something: {
-        primary: '#173A5E',
-        secondary: '#46505A',
+        primary: '#000000',
+        secondary: '#46505A'        
+      }
+    },
+    overrides: {
+      MuiTypography: {
+        root: {
+          color: 'red',
+        },
+      },
+      MuiButton: {
+        root: {
+          margin: '25px',
+          color: 'green'
+        },
       }
     }
   };

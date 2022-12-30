@@ -3,13 +3,9 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-// import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-// import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
 const cards = [1, 2, 3, 4];
@@ -35,16 +31,10 @@ const link = [
   'https://codebeautify.org/json-to-base64-converter'  
 ];
 
-const theme = createTheme();
-
 export default function Favorites() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
       <main>
-
-        <Container sx={{ py: 2 }} maxWidth="xl">          
-
+        <Container sx={{ py: 2 }} maxWidth="xl">                    
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <Paper align="center" elevation={10} >
@@ -53,22 +43,21 @@ export default function Favorites() {
             </Grid>
           </Grid> 
           <br />
-
           <Grid container spacing={4}>
             {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+              <Grid item key={card} xs={12} sm={6} md={3}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography align="center" gutterBottom variant="h5" component="h2">
                       {heading[card]}
                     </Typography>
-                    <Typography>
+                    <Typography align="center">
                       {subheading[card]}
                     </Typography>
                   </CardContent>
-                  <CardActions>
+                  <CardActions style={{ justifyContent: 'right' }}>
                     <a href={link[card]} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
                       <Button size="small">Visit</Button>                    
                     </a>
@@ -77,9 +66,7 @@ export default function Favorites() {
               </Grid>
             ))}
           </Grid>
-
         </Container>
       </main>
-    </ThemeProvider>
   );
 }

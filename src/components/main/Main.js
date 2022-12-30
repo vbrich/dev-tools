@@ -194,7 +194,6 @@ function MainContent() {
           </List>
         </Drawer>
 
-
         {/* MAIN AREA */}
         <Box
           component="main"
@@ -212,6 +211,12 @@ function MainContent() {
           }}
         >
           <Toolbar />
+
+{/* 
+          <Typography color="something.primary">(testing typography from main.js)</Typography>
+          <Typography>(testing typography from main.js)</Typography>
+          <button>Send data</button>
+*/}
 
           <Outlet></Outlet>
 
@@ -233,12 +238,6 @@ function MainContent() {
           </Box>
 
         </Box>
-
-{/* Just a pallete example
-        <Box sx={{
-          bgcolor: 'something.primary'
-        }}>Testing</Box>
-*/}
 
       </Box>
     </ThemeProvider>

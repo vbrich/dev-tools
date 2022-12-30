@@ -4,13 +4,22 @@ const dark = {
       primary: {
         main: '#61dafb'
       },
-      text: {
-        primary: '#fff',
-        secondary: '#fff',
-      },
       something: {
-        primary: '#46505A',
+        primary: '#ffffff',
         secondary: '#173A5E',
+      }
+    },
+    overrides: {
+      MuiTypography: {
+        root: {
+          color: '#eeeeee',
+        },
+      },
+      MuiButton: {
+        root: {
+          margin: '25px',
+          color: 'green'
+        },
       }
     }
   };
