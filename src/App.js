@@ -18,6 +18,7 @@ function App() {
         <Route path='/signin' element={<SignInSide />}/> 
         <Route path='/' element={<Navigate to="/roadmap" replace/>} />   
         <Route path='/main' element={<Navigate to="/roadmap" replace/>} />
+        <Route path='/dev-tools' element={<Navigate to="/" replace/>} />
         <Route path='/*' element={<Main />}>                    
             <Route path='roadmap' element={<Roadmap />}/>
             <Route path='favorites' element={<Favorites />}/>
