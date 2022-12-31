@@ -8,6 +8,7 @@ import TemporaryDrawer from './components/examples/DrawerExample';
 import Favorites from './components/main/Favorites';
 import Question from './components/openai/Question';
 import Roadmap from './components/main/Roadmap';
+import Game from './components/games/Game';
 
 function App() {
   return (    
@@ -21,6 +22,7 @@ function App() {
             <Route path='roadmap' element={<Roadmap />}/>
             <Route path='favorites' element={<Favorites />}/>
             <Route path='question' element={<Question />}/>
+            <Route path='games' element={<Game />}/>
         </Route>
         <Route path='/drawer' element={<TemporaryDrawer />}/> 
       </Routes>

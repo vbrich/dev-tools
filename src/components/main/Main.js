@@ -25,6 +25,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import MapIcon from '@mui/icons-material/Map';
 import { Link } from "react-router-dom";
 
@@ -179,7 +180,15 @@ function MainContent() {
                 <ListItemText primary="Chat" />
               </ListItemButton>
             </Link> 
-            
+            <Link to="/games" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <SportsEsportsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Game" />
+              </ListItemButton>
+            </Link>        
+                 
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
