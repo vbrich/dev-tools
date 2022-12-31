@@ -8,27 +8,30 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 
-const cards = [1, 2, 3, 4];
+const cards = [1, 2, 3, 4, 5];
 const heading = [
   '', 
   'Features',
   'Encode PDF', 
   'Decode PDF', 
-  'Encode JSON'  
+  'Encode JSON',
+  'Decode JSON'  
 ];
 const subheading = [
   '',   
   'Trello Board',
   'Convert PDF to base64', 
   'Convert base64 to PDF', 
-  'Convert JSON to base64'  
+  'Convert JSON to base64',
+  'Convert base64 to JSON'  
 ];
 const link = [
   '', 
   'https://trello.com/b/1m048pHn/features',
   'https://base64.guru/converter/encode/pdf', 
   'https://base64.guru/converter/decode/pdf', 
-  'https://codebeautify.org/json-to-base64-converter'  
+  'https://codebeautify.org/json-to-base64-converter',
+  'https://codebeautify.org/base64-to-json-converter'  
 ];
 
 export default function Favorites() {

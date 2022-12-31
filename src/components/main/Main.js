@@ -154,7 +154,7 @@ function MainContent() {
           </Toolbar>
 
           <Divider />
-          <List component="nav" dense="true">     
+          <List component="nav">     
           <Link to="/roadmap" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
