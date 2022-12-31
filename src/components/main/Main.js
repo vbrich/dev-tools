@@ -24,8 +24,8 @@ import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import HttpIcon from '@mui/icons-material/Http';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import MapIcon from '@mui/icons-material/Map';
 import { Link } from "react-router-dom";
 
 const drawerWidth = 250;
@@ -154,7 +154,15 @@ function MainContent() {
           </Toolbar>
 
           <Divider />
-          <List component="nav" dense="true">            
+          <List component="nav" dense="true">     
+          <Link to="/roadmap" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                    <MapIcon />
+                </ListItemIcon>
+                <ListItemText primary="Roadmap" />
+              </ListItemButton>
+            </Link>                  
             <Link to="/favorites" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -162,16 +170,8 @@ function MainContent() {
                 </ListItemIcon>
                 <ListItemText primary="Favorites" />
               </ListItemButton>
-            </Link>             
-            <Link to="/apitest" style={{ color: linkColor, textDecoration: 'none' }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HttpIcon />
-                </ListItemIcon>
-                <ListItemText primary="API Test" />
-              </ListItemButton>
-            </Link>               
-            <Link to="/chat" style={{ color: linkColor, textDecoration: 'none' }}>
+            </Link>                         
+            <Link to="/question" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
                   <IntegrationInstructionsIcon />
@@ -179,7 +179,7 @@ function MainContent() {
                 <ListItemText primary="Chat" />
               </ListItemButton>
             </Link> 
-
+            
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
