@@ -10,6 +10,11 @@ const dark = {
       }
     },
     overrides: {
+      MuiPaper: {
+        root: {
+          backgroundColor: 'red',
+        },
+      },      
       MuiTypography: {
         root: {
           color: '#eeeeee',

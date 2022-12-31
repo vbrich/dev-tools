@@ -10,6 +10,11 @@ const light = {
       }
     },
     overrides: {
+      MuiPaper: {
+        root: {
+          backgroundColor: 'red',
+        },
+      },
       MuiTypography: {
         root: {
           color: 'red',

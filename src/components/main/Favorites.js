@@ -37,7 +37,7 @@ export default function Favorites() {
         <Container sx={{ py: 2 }} maxWidth="xl">                    
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <Paper align="center" elevation={10} >
+              <Paper align="center" elevation={0} style={{ backgroundColor: 'inherit' }}>
                 <h1>Favorites</h1>            
               </Paper>
             </Grid>
@@ -47,6 +47,7 @@ export default function Favorites() {
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={3}>
                 <Card
+                  style={{ backgroundColor: 'inherit' }}
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
                   <CardContent sx={{ flexGrow: 1 }}>
