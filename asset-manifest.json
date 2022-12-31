@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/vbrich/dev-tools/static/js/main.6b97f08e.js",
+    "index.html": "/vbrich/dev-tools/index.html",
+    "main.6b97f08e.js.map": "/vbrich/dev-tools/static/js/main.6b97f08e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6b97f08e.js"
+  ]
+}
