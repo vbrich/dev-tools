@@ -26,6 +26,13 @@ const test = {
       }
     },
     overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          body: {
+            transition: 'all 3.3s linear',
+          },
+        },
+      },
       MuiTypography: {
         root: {
           color: '#eeeeee',

@@ -98,7 +98,7 @@ function MainContent() {
       <Box sx={{ display: 'flex' }}>
 
         {/* APP BAR ON TOP */}
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" style={{ transition: 'all 1.0s linear' }} open={open}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -214,6 +214,7 @@ function MainContent() {
 
         {/* MAIN AREA */}
         <Box
+          style={{ transition: 'all 1.0s linear' }}
           component="main"
           sx={{
             backgroundColor: (theme) =>

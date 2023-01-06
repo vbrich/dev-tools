@@ -10,6 +10,13 @@ const light = {
       }
     },
     overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          body: {
+            transition: 'all 3.3s linear',
+          },
+        },
+      },
       MuiPaper: {
         root: {
           backgroundColor: 'red',
