@@ -54,7 +54,8 @@ export default function Question() {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Paper align="center" elevation={0} style={{ backgroundColor: 'inherit' }}>
-              <h1>Chat</h1>                          
+              <h1>Chat</h1>  
+              <h5><i>Using OpenAI's CreateCompletion and their GPT3 text-davinci-003 model </i></h5>                        
             </Paper>
           </Grid>
         </Grid> 
@@ -67,7 +68,7 @@ export default function Question() {
             >
               <TextField 
                 id="question-box" 
-                label="Enter a coding question" 
+                label="Enter a prompt for the chat" 
                 variant="outlined" 
                 value={message} 
                 onChange={handleMessageChange}

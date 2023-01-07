@@ -5,18 +5,16 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { TextField } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 
 export default function DallE() {
   const [prompt, setPrompt] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
-  const [placeholder, setPlaceholder] = useState(
-    "Search Bears with Paint Brushes the Starry Night, painted by Vincent Van Gogh.."
-  );
 
   const generateImage = async () => {
-    setPlaceholder(`Search ${prompt}..`);
+    // setPlaceholder(`Search ${prompt}..`);
     setLoading(true);
     const res = await renderImage(prompt);
     setLoading(false);
@@ -28,13 +26,22 @@ export default function DallE() {
     setLoading(false);
   }  
 
+  // Handle when enter is clicked on textfield
+  const enterPressed = event => {
+    var code = event.keyCode || event.which;
+    if(code === 13) { //13 is the enter keycode
+      generateImage();
+    } 
+  }
+  
   return (
     <div>
       <Container sx={{ py: 2 }} maxWidth="xl">                    
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Paper align="center" elevation={0} style={{ backgroundColor: 'inherit' }}>
-              <h1>Generate Image</h1>                          
+              <h1>Generate Image</h1> 
+              <h5><i>An example of image generation using DALL-E models from OpenAI</i></h5>                         
             </Paper>
           </Grid>
         </Grid> 
@@ -45,12 +52,13 @@ export default function DallE() {
               sx={{ p: 2, display: 'flex', flexDirection: 'column' }} 
               style={{ backgroundColor: 'inherit' }}
             >
-              <textarea
-                className="app-input"
-                placeholder={placeholder}
+              <TextField 
+                id="image-text" 
+                label="Enter a description for an image" 
+                variant="outlined"
+                value={prompt} 
                 onChange={(e) => setPrompt(e.target.value)}
-                rows="10"
-                cols="10"
+                onKeyPress={enterPressed.bind(this)}
               />
               <Stack
                 sx={{ pt: 1 }}
