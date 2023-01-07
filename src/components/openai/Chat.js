@@ -1,5 +1,3 @@
-// import { codingQuestion } from '../../utils/api';
-// import { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import { codingQuestion } from '../../utils/api';
 import { useState } from 'react';
@@ -56,12 +54,11 @@ export default function Question() {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Paper align="center" elevation={0} style={{ backgroundColor: 'inherit' }}>
-              <h1>Code Question</h1>                          
+              <h1>Chat</h1>                          
             </Paper>
           </Grid>
         </Grid> 
         <br />
-
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Paper 
@@ -93,7 +90,6 @@ export default function Question() {
             </Paper>
           </Grid>
         </Grid>  
-      
       </Container>     
     </div>      
   );

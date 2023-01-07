@@ -25,7 +25,7 @@ export default function Game(props) {
             height="500"
             >
         </iframe>  
-
+{/* 
         <iframe
             title="game2"
             src="https://playpager.com/embed/reversi/index.html"
@@ -34,7 +34,7 @@ export default function Game(props) {
             height="500"    
         >
         </iframe>
-
+*/}
       </Container>
     </div>
   );

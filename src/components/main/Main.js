@@ -24,7 +24,8 @@ import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import ChatIcon from '@mui/icons-material/Chat';
+import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import MapIcon from '@mui/icons-material/Map';
 import { Link } from "react-router-dom";
@@ -98,7 +99,7 @@ function MainContent() {
       <Box sx={{ display: 'flex' }}>
 
         {/* APP BAR ON TOP */}
-        <AppBar position="absolute" style={{ transition: 'all 1.0s linear' }} open={open}>
+        <AppBar position="absolute" style={{ transition: 'all .3s linear' }} open={open}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -172,14 +173,22 @@ function MainContent() {
                 <ListItemText primary="Favorites" />
               </ListItemButton>
             </Link>                         
-            <Link to="/question" style={{ color: linkColor, textDecoration: 'none' }}>
+            <Link to="/chat" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
-                  <IntegrationInstructionsIcon />
+                  <ChatIcon />
                 </ListItemIcon>
                 <ListItemText primary="Chat" />
               </ListItemButton>
             </Link> 
+            <Link to="/dalle" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ImageSearchIcon />
+                </ListItemIcon>
+                <ListItemText primary="Dall-E" />
+              </ListItemButton>
+            </Link>             
             <Link to="/games" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -214,7 +223,7 @@ function MainContent() {
 
         {/* MAIN AREA */}
         <Box
-          style={{ transition: 'all 1.0s linear' }}
+          style={{ transition: 'all .3s linear' }}
           component="main"
           sx={{
             backgroundColor: (theme) =>

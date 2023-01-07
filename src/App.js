@@ -6,9 +6,10 @@ import SignInSide from './components/signin/SigninSide';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import TemporaryDrawer from './components/examples/DrawerExample';
 import Favorites from './components/main/Favorites';
-import Question from './components/openai/Question';
+import Chat from './components/openai/Chat';
 import Roadmap from './components/main/Roadmap';
 import Game from './components/games/Game';
+import DallE from './components/openai/DallE';
 
 function App() {
   return (    
@@ -21,7 +22,8 @@ function App() {
         <Route path='/*' element={<Main />}>                    
             <Route path='roadmap' element={<Roadmap />}/>
             <Route path='favorites' element={<Favorites />}/>
-            <Route path='question' element={<Question />}/>
+            <Route path='chat' element={<Chat />}/>
+            <Route path='dalle' element={<DallE />}/>
             <Route path='games' element={<Game />}/>
         </Route>
         <Route path='/drawer' element={<TemporaryDrawer />}/> 
