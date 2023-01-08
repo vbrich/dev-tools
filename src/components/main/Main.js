@@ -173,12 +173,12 @@ function MainContent() {
                 <ListItemText primary="Favorites" />
               </ListItemButton>
             </Link>                         
-            <Link to="/chat" style={{ color: linkColor, textDecoration: 'none' }}>
+            <Link to="/davinci" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
                   <ChatIcon />
                 </ListItemIcon>
-                <ListItemText primary="Chat" />
+                <ListItemText primary="Davinci" />
               </ListItemButton>
             </Link> 
             <Link to="/dalle" style={{ color: linkColor, textDecoration: 'none' }}>

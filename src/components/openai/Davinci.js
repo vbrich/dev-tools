@@ -9,7 +9,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 
-export default function Question() {
+export default function Davinci() {
   const [data, setData] = useState("");
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
@@ -54,7 +54,7 @@ export default function Question() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper align="center" elevation={0} style={{ backgroundColor: 'inherit' }}>
-            <h1>Chat</h1>  
+            <h1>Davinci</h1>  
             <h5><i>Using OpenAI's CreateCompletion and their GPT3 text-davinci-003 model </i></h5>                        
           </Paper>
         </Grid>
@@ -68,7 +68,7 @@ export default function Question() {
           >
             <TextField 
               id="question-box" 
-              label="Enter a prompt for the chat" 
+              label="Ask me something" 
               variant="outlined" 
               value={message} 
               onChange={handleMessageChange}
