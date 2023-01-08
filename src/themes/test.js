@@ -5,7 +5,7 @@ const test = {
         main: '#272727',
         light: '#757ce8',
         dark: '#002884',
-        contrastText: '#fff'
+        contrastText: "#33333" //button text white instead of black
       },
       secondary: {
         light: '#ff7961',

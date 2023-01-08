@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Paper from '@mui/material/Paper';
 
 const cards = [1, 2, 3, 4, 5];
@@ -63,7 +64,7 @@ export default function Favorites() {
                   </CardContent>
                   <CardActions style={{ justifyContent: 'right' }}>
                     <a href={link[card]} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                      <Button size="small">Visit</Button>                    
+                      <Button variant="text" color="secondary" size="small"><OpenInNewIcon /></Button>                    
                     </a>
                   </CardActions>
                 </Card>

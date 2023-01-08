@@ -126,7 +126,6 @@ function MainContent() {
             >
               {/* title goes here */}
             </Typography>
-
             <IconButton 
               color="inherit" 
               aria-label="light" 
@@ -136,7 +135,6 @@ function MainContent() {
               }}>
               {isDarkTheme ? <LightModeOutlinedIcon fontSize="inherit"/> : <NightlightOutlinedIcon fontSize="inherit"/>}  
             </IconButton>
-
           </Toolbar>
         </AppBar>
 
@@ -154,7 +152,6 @@ function MainContent() {
               <ChevronLeftIcon fontSize='inherit'/>
             </IconButton>
           </Toolbar>
-
           <Divider />
           <List component="nav" dense="true">     
           <Link to="/roadmap" style={{ color: linkColor, textDecoration: 'none' }}>
@@ -196,8 +193,7 @@ function MainContent() {
                 </ListItemIcon>
                 <ListItemText primary="Game" />
               </ListItemButton>
-            </Link>        
-                 
+            </Link>              
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
@@ -207,7 +203,6 @@ function MainContent() {
                 <ListItemText primary="Drawer Example" />
               </ListItemButton>
             </Link>
-
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/signin" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
@@ -217,7 +212,6 @@ function MainContent() {
                 <ListItemText primary="Log out" />
               </ListItemButton>
             </Link>
-
           </List>
         </Drawer>
 
@@ -245,6 +239,7 @@ function MainContent() {
           <Typography>(testing typography from main.js)</Typography>
           <button>Send data</button>
 */}
+
 
           <Outlet></Outlet>
 
