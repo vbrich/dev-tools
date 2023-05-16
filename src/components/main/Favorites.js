@@ -12,7 +12,7 @@ import Paper from '@mui/material/Paper';
 const cards = [1, 2, 3, 4, 5];
 const heading = [
   '', 
-  'Features',
+  'Roadmap',
   'Encode PDF', 
   'Decode PDF', 
   'Encode JSON',
