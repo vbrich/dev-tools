@@ -74,4 +74,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 npm start
 
 ### Deploy to github pages
+npm run deploy (will deploy all, but maybe we want our own comment)
 npm run deploy -- -m "Deploy React app to GitHub Pages"
