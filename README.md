@@ -41,7 +41,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### `npm run deploy`
 
-** https://github.com/gitname/react-gh-pages **
+[Github Pages Documentation](https://github.com/gitname/react-gh-pages)
 
 This will execute our predeploy and deploy scripts from package.json and deploy the build to ghpages. Can also execute $ npm run deploy -- -m "Deploy React app to GitHub Pages". 
 
