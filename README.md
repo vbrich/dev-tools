@@ -39,6 +39,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### `npm run deploy`
+
+** https://github.com/gitname/react-gh-pages **
+
+This will execute our predeploy and deploy scripts from package.json and deploy the build to ghpages. Can also execute $ npm run deploy -- -m "Deploy React app to GitHub Pages". 
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -68,14 +75,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-### Run Locally
-npm start
-
-### Deploy to github pages
-npm run deploy (will deploy all, but maybe we want our own comment)
-npm run deploy -- -m "Deploy React app to GitHub Pages"
-
-### Reminder
-Forked master dev-tools with a chat branch
