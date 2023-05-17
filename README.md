@@ -76,3 +76,18 @@ npm start
 ### Deploy to github pages
 npm run deploy (will deploy all, but maybe we want our own comment)
 npm run deploy -- -m "Deploy React app to GitHub Pages"
+
+### Reminder
+1. Created react app using create-react-app npx tool
+2. Installed some basic dependencies for routing and material
+- npm install @mui/material @emotion/react @emotion/styled
+- npm install @fontsource/roboto
+- npm install @mui/icons-material
+- npm install recharts
+- npm install react-router-dom
+3. update <head>
+<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+<link rel="stylesheet"href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+4. Get the router setup
+
+
