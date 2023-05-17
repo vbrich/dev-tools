@@ -22,12 +22,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
-import ScreenShareIcon from '@mui/icons-material/ScreenShare';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatIcon from '@mui/icons-material/Chat';
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import MapIcon from '@mui/icons-material/Map';
 import { Link } from "react-router-dom";
 
 const drawerWidth = 250;
@@ -153,23 +149,7 @@ function MainContent() {
             </IconButton>
           </Toolbar>
           <Divider />
-          <List component="nav" dense="true">     
-          <Link to="/roadmap" style={{ color: linkColor, textDecoration: 'none' }}>
-              <ListItemButton>
-                <ListItemIcon>
-                    <MapIcon />
-                </ListItemIcon>
-                <ListItemText primary="Roadmap" />
-              </ListItemButton>
-            </Link>                  
-            <Link to="/favorites" style={{ color: linkColor, textDecoration: 'none' }}>
-              <ListItemButton>
-                <ListItemIcon>
-                    <FavoriteIcon />
-                </ListItemIcon>
-                <ListItemText primary="Favorites" />
-              </ListItemButton>
-            </Link>                         
+          <List component="nav" dense="true">                                          
             <Link to="/davinci" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
                 <ListItemIcon>
@@ -185,24 +165,7 @@ function MainContent() {
                 </ListItemIcon>
                 <ListItemText primary="Dall-E" />
               </ListItemButton>
-            </Link>             
-            <Link to="/games" style={{ color: linkColor, textDecoration: 'none' }}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <SportsEsportsIcon />
-                </ListItemIcon>
-                <ListItemText primary="Game" />
-              </ListItemButton>
-            </Link>              
-            <Divider sx={{ my: 1 }}></Divider>
-            <Link to="/drawer" target={"_blank"} rel="noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>
-              <ListItemButton>
-                <ListItemIcon>
-                    <ScreenShareIcon />
-                </ListItemIcon>
-                <ListItemText primary="Drawer Example" />
-              </ListItemButton>
-            </Link>
+            </Link>                          
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/signin" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>
@@ -233,13 +196,6 @@ function MainContent() {
           }}
         >
           <Toolbar />
-
-{/* 
-          <Typography color="something.primary">(testing typography from main.js)</Typography>
-          <Typography>(testing typography from main.js)</Typography>
-          <button>Send data</button>
-*/}
-
 
           <Outlet></Outlet>
 

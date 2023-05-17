@@ -3,7 +3,7 @@
 // TODO: Just have a test replit express server calling openai with no validation, etc
 export async function codingQuestion(promptData) {
   // promptData = promptData + " and surround any code returned with triple backticks";
-  // console.log('Prompt Data = ' + promptData);
+  console.log('Prompt Data = ' + promptData);
   const response = await fetch("https://openai.ribo916.repl.co/", {
     method: "POST",    
     headers: {
@@ -14,7 +14,7 @@ export async function codingQuestion(promptData) {
     })  
   });
   const data = await response.json();
-  // console.log('Data = ' + JSON.stringify(data));
+  console.log('Data = ' + JSON.stringify(data));
   return data;  
 }
 
@@ -39,7 +39,7 @@ export async function renderImage(promptData) {
 
 // TODO: Just have a test replit express server calling openai with no validation, etc
 export async function renderImage(promptData) {
-  // console.log('Prompt Data = ' + promptData);
+  console.log('Prompt Data = ' + promptData);
   const response = await fetch("https://openai.ribo916.repl.co/image", {
     method: "POST",    
     headers: {
@@ -50,6 +50,6 @@ export async function renderImage(promptData) {
     })  
   });
   const data = await response.text(); //json();
-  // console.log('Data = ' + data);
+  console.log('Data = ' + data);
   return data;  
 }
