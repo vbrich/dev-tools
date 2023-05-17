@@ -25,6 +25,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import ChatIcon from '@mui/icons-material/Chat';
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import { Link } from "react-router-dom";
+import TableRestaurantIcon from '@mui/icons-material/TableRestaurant';
 
 const drawerWidth = 250;
 
@@ -166,6 +167,15 @@ function MainContent() {
                 <ListItemText primary="Dall-E" />
               </ListItemButton>
             </Link>                          
+            <Divider sx={{ my: 1 }}></Divider>
+            <Link to="/drawer" style={{ color: linkColor, textDecoration: 'none' }}>
+              <ListItemButton>
+                <ListItemIcon>
+                    <TableRestaurantIcon />
+                </ListItemIcon>
+                <ListItemText primary="DrawerTest" />
+              </ListItemButton>
+            </Link>
             <Divider sx={{ my: 1 }}></Divider>
             <Link to="/signin" style={{ color: linkColor, textDecoration: 'none' }}>
               <ListItemButton>

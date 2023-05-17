@@ -14,13 +14,13 @@ function App() {
       <CssBaseline />
       <Routes>
         <Route path='/signin' element={<SignInSide />}/> 
+        <Route path='/drawer' element={<DrawerExample />}/>
         <Route path='/' element={<Navigate to="/davinci" replace/>} />   
         <Route path='/main' element={<Navigate to="/davinci" replace/>} />
         <Route path='/*' element={<Main />}>                    
             <Route path='davinci' element={<Davinci />}/>
             <Route path='dalle' element={<DallE />}/>
         </Route>
-        <Route path='/drawer' element={<DrawerExample />}/>
       </Routes>
     </BrowserRouter>
   );
